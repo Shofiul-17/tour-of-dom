@@ -3,9 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tour Of DOM</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .fruits-container li{
+            color: tomato;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome To My DOM</h1>
+    </header>
+    <main>
+        <section>
+            <h1>My Awesome DOM De Baba</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Minus ex error eos omnis quisquam animi esse quaerat praesentium 
+                architecto amet, aperiam delectus totam sed dolor sapiente maiores, 
+                voluptates blanditiis impedit.
+            </p>
+            <ul>
+                <li>Jalali Set</li>
+                <li>Shafayet</li>
+                <li>Bonobash</li>
+                <li>Gechhega</li>
+                <li>Thikachhe</li>
+                <li>DOM de re baba</li>
+            </ul>
+        </section>
+        <section class="fruits-container">
+            <h1 id="fruits-title"> Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+                <li>Avocado</li>
+                <li>Brocoli</li>
+            </ul>
+        </section>
+        <section class="places-container">
+            <h1 id="places-title"> Places I like to visit </h1>
+            <ul>
+                <li class="important-places">Soondorbon</li>
+                <li class="important-places">Bandorbon</li>
+                <li class="important-places">Katabon</li>
+                <li class="other-place">Shalbon</li>
+                <li>Fulbon</li>
+                <li>Jhaubon</li>
+            </ul>
+        </section>
+    </main>
+    <script src="js/styleInJs.js"></script>
+    <script src="js/dom.js"></script>
+    <script>
+        // ======================================================================
+        /* If you specify an HTML tag within the parentheses of "getElementsByTagName()", 
+        you will retrieve all elements corresponding to that tag present in the HTML document. */ 
+        const liCollection = document.getElementsByTagName("li");
+        // console.log(liCollection);
+        for(const li of liCollection){
+            // console.log(li);
+            // console.log(li.innerText);
+        }
+
+        const allHeadings = document.getElementsByTagName('h1')
+        // console.log(allHeadings);
+        for(const h1 of allHeadings){
+            // console.log(h1);
+            // console.log(h1.innerText)
+        }
+
+        // ======================================================================
+        /* const student = {
+            name: "Abul",
+            ID: 11,
+            study: function(time){
+                console.log(time, "Study kortechhe!");
+            }
+        }
+        console.log("Adding JS inside the HTML file"); */
+
+
+        // ======================================================================
+        /* If you specify any CSS ID within the parentheses of "getElementById()", only the element 
+        corresponding to that specific CSS ID will be retrieved from the HTML document. */
+        const fruitsTitle = document.getElementById("fruits-title");
+        // console.log(fruitsTitle);
+
+        // If you want to change any innerText.
+        fruitsTitle.innerText = "Fruits Changed by JavaScript";
+        
+        /* If you want to style any innerText. You can style HTML elements using the "values" 
+        of the "style property" to apply any kind of style. */
+        fruitsTitle.style.color = "red";
+        fruitsTitle.style.backgroundColor = "yellow";
+
+        /* If you specify a CSS class name inside the parentheses of getElementsByClassName(), 
+        you will retrieve all elements in the HTML document that share that same class. */
+        const places = document.getElementsByClassName("important-places");
+        // console.log(places);
+        /* for(const place of places){
+            console.log(place.innerText);
+        } */
+
+        // ======================================================================
+        /* You can style HTML elements using the "values" of the "style property" 
+        to apply any kind of style. */
+        /* const placesTitleColor = document.getElementById("places-title").style.color = "red";
+        const placesTitleBg = document.getElementById("places-title").style.backgroundColor = "pink";
+        const placesTitleTextAlign = document.getElementById("places-title").style.textAlign = "right"; */
     
+
+        // ======================================================================
+        const title = document.getElementById("places-title");
+        title.getAttribute("id");
+        // console.log(title);
+        // ======================================================================
+
+        // ======================================================================
+        // ======================================================================
+        // ======================================================================
+        // ======================================================================
+        // ======================================================================
+    </script>
 </body>
 </html>

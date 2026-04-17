@@ -1,0 +1,20 @@
+h1{
+    background-color: blue;
+    text-align: center;
+    padding: 25px;
+    color: white;
+}
+
+h2{
+    color: blue;
+}
+
+li{
+    color: gray;
+}
+#fruits-title{
+    color: lightpink;
+}
+.important-places{
+    color: blueviolet;
+}
