@@ -58,6 +58,7 @@
     <script src="js/dom.js"></script>
     <script>
         // ======================================================================
+        /* Option-1: getElementsByTagName */
         /* If you specify an HTML tag within the parentheses of "getElementsByTagName()", 
         you will retrieve all elements corresponding to that tag present in the HTML document. */ 
         const liCollection = document.getElementsByTagName("li");
@@ -71,7 +72,7 @@
         // console.log(allHeadings);
         for(const h1 of allHeadings){
             // console.log(h1);
-            // console.log(h1.innerText)
+            // console.log(h1.innerText);
         }
 
         // ======================================================================
@@ -86,10 +87,11 @@
 
 
         // ======================================================================
+        /* Option-2: getElementById() We will use this a lot */
         /* If you specify any CSS ID within the parentheses of "getElementById()", only the element 
         corresponding to that specific CSS ID will be retrieved from the HTML document. */
         const fruitsTitle = document.getElementById("fruits-title");
-        // console.log(fruitsTitle);
+        console.log(fruitsTitle);
 
         // If you want to change any innerText.
         fruitsTitle.innerText = "Fruits Changed by JavaScript";
@@ -99,13 +101,29 @@
         fruitsTitle.style.color = "red";
         fruitsTitle.style.backgroundColor = "yellow";
 
+
+        // ======================================================================
+        /* Option-3: getElementsByClassName() We will use lot */
         /* If you specify a CSS class name inside the parentheses of getElementsByClassName(), 
         you will retrieve all elements in the HTML document that share that same class. */
         const places = document.getElementsByClassName("important-places");
-        // console.log(places);
-        /* for(const place of places){
+        console.log(places);
+        for(const place of places){
             console.log(place.innerText);
-        } */
+        }
+
+
+        // ======================================================================
+        /* Option-4: querySelector() Method */
+        /* Option-5: querySelectorAll() Method */
+        const someLi = document.querySelectorAll('.fruits-container li');
+        console.log(someLi);
+        for(const li of someLi){
+            // console.log(li);
+            console.log(li.innerText);
+        }
+
+        
 
         // ======================================================================
         /* You can style HTML elements using the "values" of the "style property" 
@@ -121,8 +139,7 @@
         // console.log(title);
         // ======================================================================
 
-        // ======================================================================
-        // ======================================================================
+        
         // ======================================================================
         // ======================================================================
         // ======================================================================
