@@ -19,9 +19,10 @@ li{
     color: blueviolet;
 }
 
-/* .yellow-bg{
+.yellowgreen-bg{
     background-color: yellowgreen !important;
-} */
+    /* text-align: center; */
+}
 
 .large-text{
     font-size: 2em;
